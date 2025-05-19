@@ -1,0 +1,26 @@
+body {
+   text-align: center; 
+   background-color: lightgray ;
+   margin: 0;
+   padding: 20px;
+}
+
+.board-container table {
+   margin: 0 auto ;
+}
+
+td {
+   text-align: center;
+   vertical-align: middle;
+   background-color: whitesmoke;
+   border: 1px solid gray;
+   color: black;
+   width: 40px;
+   height: 40px;
+   font-size: 24px;
+   cursor: pointer;
+}
+
+td:hover {
+   background-color: silver;
+}
