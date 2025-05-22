@@ -1,26 +1,112 @@
+
 body {
-   text-align: center; 
-   background-color: lightgray ;
-   margin: 0;
-   padding: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.game-info {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+.level-buttons {
+    margin: 20px 0;
+}
+
+.level-btn, .smiley-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.level-btn:hover, .smiley-btn:hover {
+    background: #45a049;
+}
+
+.level-btn.active {
+    background: #2196F3;
+}
+
+.smiley-btn {
+    font-size: 24px;
+    padding: 10px 15px;
+    margin: 10px;
+    background: #FFD700;
+}
+
+.smiley-btn:hover {
+    background: #FFC107;
+}
+
+.board-container {
+    margin: 20px auto;
+    display: inline-block;
 }
 
 .board-container table {
-   margin: 0 auto ;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 td {
-   text-align: center;
-   vertical-align: middle;
-   background-color: whitesmoke;
-   border: 1px solid gray;
-   color: black;
-   width: 40px;
-   height: 40px;
-   font-size: 24px;
-   cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #e0e0e0;
+    border: 2px outset #c0c0c0;
+    color: black;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
 }
 
-td:hover {
-   background-color: silver;
+td:hover:not(.revealed) {
+    background-color: #d0d0d0;
 }
+
+td.revealed {
+    background-color: #f5f5f5;
+    border: 1px solid #999;
+}
+
+td.mine {
+    background-color: #ff6b6b !important;
+}
+
+/* Color For Number */
+.num-1 { color: blue; }
+.num-2 { color: green; }
+.num-3 { color: red; }
+.num-4 { color: purple; }
+.num-5 { color: maroon; }
+.num-6 { color: turquoise; }
+.num-7 { color: black; }
+.num-8 { color: gray; }
